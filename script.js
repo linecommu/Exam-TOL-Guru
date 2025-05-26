@@ -1,5 +1,5 @@
         
-        const LIFF_ID = "1656846002-PxVjjo6A"; // เปลี่ยนจุดที่ 1 
+        const LIFF_ID = "1656846002-lqQXX9pV"; // เปลี่ยนจุดที่ 1 
 
         
         const state = {
