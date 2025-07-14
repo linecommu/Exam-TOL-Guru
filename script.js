@@ -414,7 +414,7 @@
             }
 
             Swal.fire({
-                title: 'ยืนยันการส่งคำตอบ',
+                title: 'กรุณายืนยัน',
                 text: 'คุณต้องการส่งคำตอบหรือไม่?',
                 icon: 'question',
                 showCancelButton: true,
@@ -513,7 +513,7 @@
 
                 const button = document.createElement('button');
                 button.className = 'w-full px-4 py-3 bg-red-500 text-white rounded-lg font-semibold hover:bg-red-500 transition-colors duration-300';
-                button.textContent = 'เริ่มทำข้อสอบ';
+                button.textContent = 'ทำข้อสอบ';
                 button.onclick = () => selectSubject(subject.name);
 
                 subjectCard.appendChild(title);
