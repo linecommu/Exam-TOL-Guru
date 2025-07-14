@@ -1,7 +1,7 @@
 
 body {
     font-family: 'Prompt', sans-serif;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(#f43b47 0%, #453a94  100%);
     min-height: 100vh;
     margin: 0;
     padding: 0;
@@ -31,3 +31,224 @@ body {
     border: 2px solid transparent;
     cursor: pointer;
     padding: 16px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    background-color: #f9f9f9;
+}
+
+.option-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    border-color: #fa0511;
+    background-color: #fa0511;
+}
+
+.option-card.selected {
+    background-color: #fa0511;
+    color: white;
+    border-color: #fa0511;
+}
+
+
+.progress-bar {
+    transition: width 0.5s ease;
+    background-color: #fa0511;
+    height: 8px;
+    border-radius: 4px;
+}
+
+
+.button {
+    transition: all 0.3s ease;
+    transform: translateY(0);
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+}
+
+.button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.button:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+
+.animate-fade {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+.loading-spinner {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #667eea;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+@keyframes slideIn {
+    from { transform: translateX(-100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+.slide-in {
+    animation: slideIn 0.5s ease-out;
+}
+
+
+.summary-item {
+    transition: all 0.3s ease;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    background-color: #f9f9f9;
+}
+
+.summary-item:hover {
+    transform: translateX(5px);
+    background-color: #e6f0ff;
+}
+
+.incorrect-item {
+    background-color: #ffe6e6;
+    border-left: 4px solid #ff4d4d;
+}
+
+.incorrect-item:hover {
+    transform: translateX(5px);
+    transition: transform 0.3s ease;
+}
+
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+
+#userPicture {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+#userPicture:hover {
+    transform: scale(1.1);
+}
+
+#userName {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #444;
+    margin-top: 12px;
+}
+
+
+@media (max-width: 768px) {
+    .quiz-card {
+        padding: 16px;
+        margin: 8px;
+    }
+
+    .option-card {
+        padding: 12px;
+    }
+
+    .button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    #userPicture {
+        width: 80px;
+        height: 80px;
+    }
+
+    #userName {
+        font-size: 1.25rem;
+    }
+}
+@media (prefers-color-scheme: dark) {
+    body {
+        background: linear-gradient(135deg, #1e3a8a 0%, #4c1d95 100%);
+        color: #fc030b;
+    }
+    .quiz-card {
+        background: rgba(0, 0, 0, 0.8);
+        border-color: rgba(255, 255, 255, 0.1);
+    }
+    .option-card {
+        background-color: #1f2937;
+        color: #f3f4f6;
+    }
+    .option-card:hover {
+        background-color: #374151;
+    }
+}
+
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.loading-text {
+    margin-top: 16px;
+    font-size: 1.25rem;
+    color: #333;
+    font-weight: 500;
+}
+
+
+.hidden {
+    display: none;
+}
+span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px; 
+    height: 24px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    margin-right: 8px; 
+    flex-shrink: 0; 
+}
